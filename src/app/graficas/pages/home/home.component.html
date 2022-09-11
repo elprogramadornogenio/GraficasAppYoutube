@@ -1,0 +1,67 @@
+<mat-sidenav-container fullscreen>
+    <mat-sidenav #sidevar mode="push">
+        <mat-toolbar color="primary">
+            <span>Menu</span>
+            <span class="spacer"></span>
+            <button mat-icon-button (click)="sidevar.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+        </mat-toolbar>
+
+        <mat-nav-list>
+            <a routerLink="./linea" mat-list-item>
+                <mat-icon mat-list-icon>multiline_chart</mat-icon>
+                <span> Gráfica de lineas</span>
+            </a>
+            <a routerLink="./base" mat-list-item>
+                <mat-icon mat-list-icon>pie_chart</mat-icon>
+                <span> Gráfica de Dona</span>
+            </a>
+            <a routerLink="./pie" mat-list-item>
+                <mat-icon mat-list-icon>pie_chart</mat-icon>
+                <span> Gráfica de Torta</span>
+            </a>
+            <a routerLink="./bar" mat-list-item>
+                <mat-icon mat-list-icon>bar_chart</mat-icon>
+                <span> Gráfica de barras</span>
+            </a>
+            <a routerLink="./radar" mat-list-item>
+                <mat-icon mat-list-icon>insert_chart</mat-icon>
+                <span> Gráfica de radar</span>
+            </a>
+            <a routerLink="./polar" mat-list-item>
+                <mat-icon mat-list-icon>insert_chart</mat-icon>
+                <span> Gráfica Polar</span>
+            </a>
+            <a routerLink="./bubble" mat-list-item>
+                <mat-icon mat-list-icon>insert_chart</mat-icon>
+                <span> Gráfica de Burbuja</span>
+            </a>
+            <a routerLink="./scatter" mat-list-item>
+                <mat-icon mat-list-icon>insert_chart</mat-icon>
+                <span> Gráfica de Scatter</span>
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+
+
+
+    <mat-toolbar color="primary">
+        <span>Menú</span>
+        <button mat-icon-button (click)="sidevar.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span class="spacer"></span>
+        <span style="margin-right: 10px ;">{{ auth.usuario}}</span>
+        <button mat-raised-button color="accent" (click)="logout()">
+            Logout
+        </button>
+    </mat-toolbar>
+
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>
+</mat-sidenav-container>
+
+
+
